@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\authToko;
 use App\User;
+use App\toko;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -28,8 +30,9 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
-
+    protected $redirectTo = '/adminToko/dashboard';
+    protected $username = 'email';
+//    protected $guard = 'id_toko';
     /**
      * Create a new authentication controller instance.
      *
@@ -68,5 +71,11 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+//        return authToko::create([
+//            'email' => $data['email'],
+//            'password' => $data['password'],
+//            //'password' => bcrypt($data['password']),
+//        ]);
     }
 }

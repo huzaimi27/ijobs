@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('layouts.sidebar')
 
 @section('content')
 <div class="container">
@@ -9,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    selamat datang Admin
+                    You are logged in!
                 </div>
             </div>
         </div>

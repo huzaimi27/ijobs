@@ -56,6 +56,9 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace, 'middleware' => 'web',
         ], function ($router) {
             require app_path('Http/routes.php');
+            require app_path('Http/routes_admin.php');
+            require app_path('Http/routes_toko.php');
+            require app_path('Http/routes_mobile.php');
         });
     }
 }

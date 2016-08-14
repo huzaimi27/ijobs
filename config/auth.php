@@ -41,6 +41,16 @@ return [
             'provider' => 'users',
         ],
 
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+
+        'toko' => [
+            'driver' => 'session',
+            'provider' => 'toko',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +78,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+        'toko' => [
+            'driver' => 'eloquent',
+            'model' => App\authToko::class,
         ],
 
         // 'users' => [
